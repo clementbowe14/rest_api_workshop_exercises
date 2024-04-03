@@ -17,9 +17,10 @@ form.addEventListener('submit',  async (event) => {
     let pokemonName = data.name
     let pokemonType = data.types
     let pokemonWeight = data.weight
-    
+    let pokemonSprites = data.sprites
     let card = document.createElement('div');
     card.innerHTML = `
+    <div> <img id="bulb_image" src=${pokemonSprites.front_default}></div>
     <div> Pokemon Name: ${pokemonName}</div>
     <div> Pokemon Type: ${pokemonType[0].type.name}</div>
     <div> Pokemon Weight:${pokemonWeight}</div>
